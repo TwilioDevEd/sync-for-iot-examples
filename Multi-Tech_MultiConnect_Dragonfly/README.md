@@ -1,6 +1,6 @@
-# Twilio IoT Deployed Devices for the Multi-Tech MultiConnect® Dragonfly™
+# Twilio Sync IoT for the Multi-Tech® MultiConnect® Dragonfly™
 
-You can find our detailed Quickstart for the MultiConnect® Dragonfly™ on our [Documentation site](https://www.twilio.com/docs). You can clone this code directly to the Arm Mbed Web IDE [through this link](https://os.mbed.com/users/pkamp/code/MTS_Dragonfly_Twilio_Sync_IoT_MQTT/).
+You can find our detailed [Quickstart for the MultiConnect® Dragonfly™](https://www.twilio.com/docs/quickstart/sync-iot/mqtt-multi-tech-multiconnect-dragonfly-sync-iot) on our [Documentation site](https://www.twilio.com/docs). You can clone this code directly to the Arm Mbed Web IDE [through this link](https://os.mbed.com/users/pkamp/code/MTS_Dragonfly_Twilio_Sync_IoT_MQTT/).
 
 If you copy manually, it depends on a few libraries:
 * [Mbed Official SDK](https://os.mbed.com/users/mbed_official/code/mbed/)

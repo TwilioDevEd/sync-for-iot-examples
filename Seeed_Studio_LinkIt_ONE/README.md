@@ -1,6 +1,6 @@
-# Twilio IoT Deployed Devices for the Seeed Studio LinkIt ONE
+# Twilio Sync IoT for the Seeed Studio LinkIt ONE
 
-You can find our detailed [Quickstart for Deployed Devices on the LinkIt ONE](https://www.twilio.com/docs/quickstart/deployed-devices/mqtt-linkit-one-sync-deployed-devices) on our [Documentation site](https://www.twilio.com/docs).
+You can find our detailed [Quickstart for Sync for IoT on the LinkIt ONE](https://www.twilio.com/docs/quickstart/sync-iot/mqtt-linkit-one-sync-iot) on our [Documentation site](https://www.twilio.com/docs).
 
 `root.crt` should be copied to the root filesystem of the LinkIt, along with the decrypted client key and cert from Twilio.  Name those `client.key` and `client.crt`.
 

@@ -1,6 +1,6 @@
-# Twilio IoT Deployed Devices for the Espressif ESP32
+# Twilio Sync IoT for the Espressif ESP32
 
-You can find our detailed [Quickstart for Deployed Devices on the Espressif ESP32](https://www.twilio.com/docs/quickstart/deployed-devices/mqtt-esp32-twilio-deployed-devices) on our [Documentation site](https://www.twilio.com/docs).
+You can find our detailed [Quickstart for Sync for IoT on the Espressif ESP32](https://www.twilio.com/docs/quickstart/sync-iot/mqtt-esp32-sync-iot) on our [Documentation site](https://www.twilio.com/docs).
 
 Paste your decrypted client key and client certificate between the `()` in `R"()";` in the respective place in `certificates.hpp`.
 

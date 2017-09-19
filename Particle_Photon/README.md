@@ -1,6 +1,6 @@
-# Twilio IoT Deployed Devices for the Particle Photon
+# Twilio Sync IoT for the Particle Photon
 
-You can find our detailed [Quickstart for Deployed Devices on the Particle Photon](https://www.twilio.com/docs/guides/sms-mms-messages-particle-photon) on our [Documentation site](https://www.twilio.com/docs). You can clone this code directly to the Particle Web IDE [through this link](https://go.particle.io/shared_apps/59af8af2029f70bdf9000f5c).
+You can find our detailed [Quickstart for Sync for IoT on the Particle Photon](https://www.twilio.com/docs/quickstart/sync-iot/mqtt-particle-photon-sync-iot) on our [Documentation site](https://www.twilio.com/docs). You can clone this code directly to the Particle Web IDE [through this link](https://go.particle.io/shared_apps/59af8af2029f70bdf9000f5c).
 
 Be sure to install the `ArduinoJson` and `MQTT-TLS.h` libraries.
 

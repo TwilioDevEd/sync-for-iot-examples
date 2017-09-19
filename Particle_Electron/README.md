@@ -1,6 +1,6 @@
-# Twilio IoT Deployed Devices for the Particle Electron
+# Twilio Sync IoT for the Particle Electron
 
-You can find our detailed [Quickstart for Deployed Devices on the Particle Electron](https://www.twilio.com/docs/quickstart/deployed-devices/mqtt-particle-electron-twilio-deployed-devices) on our [Documentation site](https://www.twilio.com/docs). You can clone this code directly to the Particle Web IDE [through this link](https://go.particle.io/shared_apps/59af932d029f70ecdb000f9b).
+You can find our detailed [Quickstart for Sync for IoT on the Particle Electron](https://www.twilio.com/docs/quickstart/sync-iot/mqtt-particle-electron-sync-iot) on our [Documentation site](https://www.twilio.com/docs). You can clone this code directly to the Particle Web IDE [through this link](https://go.particle.io/shared_apps/59af932d029f70ecdb000f9b).
 
 Be sure to install the `ArduinoJson` and `MQTT-TLS.h` libraries.
 

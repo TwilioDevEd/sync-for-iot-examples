@@ -1,6 +1,6 @@
-# Twilio IoT Deployed Devices for the Espressif ESP8266
+# Twilio Sync IoT for the Espressif ESP8266
 
-You can find our detailed [Quickstart for Deployed Devices on the Espressif ESP8266](https://www.twilio.com/docs/quickstart/deployed-devices/mqtt-esp8266-twilio-connected-devices) on our [Documentation site](https://www.twilio.com/docs).
+You can find our detailed [Quickstart for Sync for IoT on the Espressif ESP8266](https://www.twilio.com/docs/quickstart/sync-iot/mqtt-esp8266-sync-iot) on our [Documentation site](https://www.twilio.com/docs).
 
 Change the `sync_key` and `sync_password` to Device Key credentials from Twilio.
 
