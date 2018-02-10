@@ -7,10 +7,10 @@
 const char* ssid                        = "YOUR_SSID";
 const char* password                    = "WIFI_PASSWORD";
 
-/* 
+/*
  *  Sync Settings
- *  
- *  Enter a Sync Key & Password, your document unique name, 
+ *
+ *  Enter a Sync Key & Password, your document unique name,
  *  and the device name
  */
 const char* sync_key                    = "KYXXXXXXXXXXXXXXXXXXXX";
@@ -27,34 +27,34 @@ void callback(char *, byte*, unsigned int);
 WiFiClientSecure espClient;
 PubSubClient client(mqtt_server, mqtt_port, callback, espClient);
 
-/* 
+/*
  * Only use the fingerprint if you have a certificate rotation strategy in place.
  * It can be enabled by setting the use_fingerprint boolean to 'true'
- *  
+ *
  * SHA1 Fingerprint valid as of August 2017, but if it expires:
  * On *NIX systems with openssl installed, you can check the fingerprint with
- * 
+ *
  * echo | openssl s_client -connect mqtt-sync.us1.twilio.com:8883 | openssl x509 -fingerprint
- * 
+ *
  * ... and look for the 'SHA1 Fingerprint' line.
  */
 const char* fingerprint         = \
-        "4E:D6:B4:16:83:9F:86:86:0E:8B:BA:47:F6:FC:3F:65:29:B6:E1:13";
+        "CE:7D:D3:B3:A0:73:BF:B6:90:B3:99:B7:7F:80:F6:81:16:F1:C0:78";
 const bool use_fingerprint      = false;
 
 
-/* 
- * Our Twilio Connected Devices message handling callback.  This is passed as a 
- * callback function when we subscribe to the document, and any messages will 
+/*
+ * Our Twilio Connected Devices message handling callback.  This is passed as a
+ * callback function when we subscribe to the document, and any messages will
  * appear here.
  */
-void callback(char* topic, byte* payload, unsigned int length) 
+void callback(char* topic, byte* payload, unsigned int length)
 {
         std::unique_ptr<char []> msg(new char[length+1]());
         memcpy (msg.get(), payload, length);
 
         Serial.print("Message arrived on topic "); Serial.println(msg.get());
-        
+
         StaticJsonBuffer<maxMQTTpackageSize> jsonBuffer;
         JsonObject& root = jsonBuffer.parseObject(msg.get());
         String led_command           = root["led"];
@@ -68,14 +68,14 @@ void callback(char* topic, byte* payload, unsigned int length)
         }
 }
 
-/* 
- * This function connects to Sync via MQTT. We connect using the key, password, and 
- * device name defined as constants above, and immediately check the server's 
+/*
+ * This function connects to Sync via MQTT. We connect using the key, password, and
+ * device name defined as constants above, and immediately check the server's
  * certificate fingerprint (if desired).
- * 
+ *
  * If everything works, we subscribe to the document topic and return.
  */
-void connect_mqtt() 
+void connect_mqtt()
 {
         while (!client.connected()) {
                 Serial.println("Attempting to connect to Twilio Sync...");
@@ -98,11 +98,11 @@ void connect_mqtt()
 }
 
 /* In setup, we configure our LED for output, turn it off, and connect to WiFi */
-void setup() 
+void setup()
 {
         pinMode(BUILTIN_LED, OUTPUT);
         digitalWrite(BUILTIN_LED, HIGH); // Active LOW LED
-        
+
         Serial.begin(115200);
         WiFi.begin(ssid, password);
 
@@ -118,13 +118,13 @@ void setup()
 }
 
 /* Our loop constantly checks we are still connected.  On disconnects we try again. */
-void loop() 
+void loop()
 {
         if (!client.connected()) {
                 connect_mqtt();
         }
         client.loop();
-        
+
         // Here's an example of publishing from the ESP8266.
         // Uncomment until the end of the function to send a 'msg' back to Sync
         // every 2 minutes!
@@ -133,7 +133,7 @@ void loop()
         if (millis() > now + (2*(1000*60))) {
                 Serial.println("Sending 2 minute ON message to Twilio!");
                 client.publish(
-                        sync_document, 
+                        sync_document,
                         "{\"msg\":\"Ahoy!\",\"led\":\"ON\"}\0"
                 );
                 now = millis();
